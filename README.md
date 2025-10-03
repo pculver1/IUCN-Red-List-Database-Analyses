@@ -16,7 +16,7 @@ The relational database models:
 - **Conservation status** (critically endangered, endangered, vulnerable, etc.)
 - **Country occurrences** (where species are found globally)
 
-![ERD](schema/ERD.pdf)
+![ERD](figures/ERD_IUCN.png)
 
 ## Data Wrangling & Analysis
 - Cleaned the raw IUCN hierarchy and country occurrence CSVs.
@@ -26,7 +26,7 @@ The relational database models:
 
 Example result:
 
-![Threatened species per family](figures/threatened_species_pie_chart.png)
+![Threatened species per family](figures/IUCN_piechart.png)
 
 ## Data Sources
 - IUCN Red List species data (downloaded via provided CSVs).  
