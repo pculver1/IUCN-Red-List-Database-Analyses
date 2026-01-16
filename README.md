@@ -1,40 +1,66 @@
-# IUCN Red List Database Project
+# IUCN Red List Threat Analysis by Taxonomic Family
+(SQL + Python + pandas + matplotlib)
 
-This project models and analyzes species conservation data from the **IUCN Red List of Threatened Species**.  
-It demonstrates database design, data wrangling, and visualization using **SQL, Python (pandas/matplotlib), and relational modeling**.
+## Objective
+Identify which taxonomic families contain the highest numbers of threatened species
+(Critically Endangered, Endangered, and Vulnerable) using normalized IUCN Red List data.
 
-## Contents
-- **schema/** → ER diagram and relational schema for the database
-- **data/** → Original IUCN datasets (CSV) and cleaned tables
-- **notebooks/** → Jupyter Notebook for data wrangling and visualization
-- **figures/** → Generated plots
-- **reports/** → Project writeups and final reports
+This project focuses on structuring messy conservation data into a relational format
+and extracting biologically meaningful insights to support conservation prioritization.
 
-## Database Design
-The relational database models:
-- **Taxonomy** (kingdom → phylum → class → order → family → genus → species)
-- **Conservation status** (critically endangered, endangered, vulnerable, etc.)
-- **Country occurrences** (where species are found globally)
+---
 
-![ERD](figures/ERD_IUCN.png)
+## Key Result
+After cleaning and normalizing IUCN hierarchy and country occurrence data, the analysis
+shows that threatened species are unevenly distributed across taxonomic families, with
+a small subset of families accounting for a disproportionate share of conservation risk.
 
-## Data Wrangling & Analysis
-- Cleaned the raw IUCN hierarchy and country occurrence CSVs.
-- Generated normalized tables: `families.csv`, `genus.csv`, `species.csv`, `country_occurrences.csv`.
-- Used SQL queries to compute threatened species counts by family.
-- Visualized results with Python/matplotlib.
+**Takeaway:** Aggregating threat status at the family level highlights priority taxonomic
+groups where conservation and monitoring efforts may have the greatest impact.
 
-Example result:
+---
 
-![Threatened species per family](figures/IUCN_piechart.png)
+## What This Project Demonstrates
+- Relational database design from real-world biological datasets
+- Data cleaning and normalization of large CSV files
+- SQL-based aggregation of conservation status
+- Python-based visualization for interpretability
 
-## Data Sources
-- IUCN Red List species data (downloaded via provided CSVs).  
-- Project-specific wrangling and query results generated in Python.
+---
 
-## License
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+## Methods (Brief)
+- Source data: IUCN Red List hierarchy and country occurrence CSVs
+- Cleaning: removed duplicates and nulls, normalized taxonomy tables,
+  and stripped hidden characters from categorical fields
+- Analysis: SQL queries used to count CR, EN, and VU species per family
+- Visualization: matplotlib used to visualize threatened species distribution
 
-## Acknowledgements
-Created as part of coursework at Arizona State University.  
-Thanks to instructors and classmates for guidance and collaboration.
+---
+
+## Example Output
+Distribution of Threatened Species per Family (CR, EN, VU)
+See figures/threatened_species_pie_chart.png
+
+---
+
+## Repository Structure
+schema/     ER diagram and relational schema  
+data/       Raw and cleaned IUCN CSV files  
+notebooks/  Jupyter notebooks for wrangling and visualization  
+figures/    Generated plots  
+reports/    Project writeups and documentation  
+
+---
+
+## Reproducibility
+1. Clone the repository
+2. Open the notebook in notebooks/
+3. Run all cells to reproduce cleaned tables and figures
+
+---
+
+## Potential Extensions
+- Geographic aggregation to identify country-level hotspots
+- Ranked bar plots instead of pie charts for scalability
+- Temporal analysis using assessment year metadata
+
