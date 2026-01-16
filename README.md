@@ -3,7 +3,7 @@
 
 ## Objective
 Identify which taxonomic families contain the highest numbers of threatened species
-(Critically Endangered, Endangered, and Vulnerable) using normalized IUCN Red List data.
+(Critically Endangered, Endangered, and Vulnerable) using normalized International Union for Conservation of Nature (IUCN) Red List data.
 
 This project focuses on structuring messy conservation data into a relational format
 and extracting biologically meaningful insights to support conservation prioritization.
