@@ -39,7 +39,7 @@ groups where conservation and monitoring efforts may have the greatest impact.
 
 ## Example Output
 Distribution of Threatened Species per Family (CR, EN, VU)
-See figures/threatened_species_pie_chart.png
+![Distribution of Threatened Species per Family](figures/threatened_species_pie_chart.png)
 
 ---
 
